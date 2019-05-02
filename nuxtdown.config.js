@@ -18,14 +18,12 @@ module.exports = {
       }
     ],
     [
-      [
-        'products',
-        {
-          page: '/products/_product',
-          permalink: '/product/:slug',
-          isPost: false
-        }
-      ]
+      'products',
+      {
+        page: '/products/_product',
+        permalink: '/product/:slug',
+        isPost: false
+      }
     ]
   ]
 }
