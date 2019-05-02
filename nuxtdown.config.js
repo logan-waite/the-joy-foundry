@@ -10,7 +10,7 @@ module.exports = {
   },
   content: [
     [
-      'pages',
+      'blog',
       {
         page: '/page/_page',
         permalink: '/:slug',
