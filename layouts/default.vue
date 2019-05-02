@@ -1,13 +1,23 @@
 <template>
   <div>
-    <nuxt />
+    <nav>
+      <ul>
+        <li>
+          <nuxt-link :to="'/page-1'">Page 1</nuxt-link>
+        </li>
+        <li>
+          <nuxt-link :to="'/page-2'">Page 2</nuxt-link>
+        </li>
+      </ul>
+    </nav>
+    <nuxt/>
   </div>
 </template>
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;

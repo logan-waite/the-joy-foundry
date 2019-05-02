@@ -1,22 +1,27 @@
-# the-joy-foundry
+# netlify-blog-test
 
-> Connecting people to their joy
+> Nuxt.js + Netlify CMS project
 
 ## Build Setup
 
 ``` bash
 # install dependencies
-$ yarn install
+$ npm install # Or yarn install
 
 # serve with hot reload at localhost:3000
-$ yarn run dev
+$ npm run dev
 
-# build for production and launch server
-$ yarn run build
-$ yarn start
+# build with server-side rendering for production
+# and start server
+$ npm run build
+$ npm start
 
-# generate static project
-$ yarn run generate
+# generate static project for production
+$ npm run generate
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+See [starter template documentation in the README on GitHub](https://github.com/renestalder/nuxt-netlify-cms-starter-template) for additional usage and configuration.
+
+## Edit content
+
+Access `yourwebsite.com/admin`, e.g. `localhost:3000/admin`.

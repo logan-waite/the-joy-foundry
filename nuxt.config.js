@@ -1,54 +1,47 @@
-import pkg from './package'
-
-export default {
-  mode: 'universal',
-
+module.exports = {
+  modules: ["nuxtdown"],
+  env: {
+    BASE_URL: process.env.BASE_URL || 'http://localhost:3000'
+  },
   /*
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    htmlAttrs: {
+      lang: 'en',
+    },
+    title: "My Website",
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      {
+        hid: "description",
+        name: "description",
+        content: "Welcome to my website."
+      }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
   },
-
   /*
-  ** Customize the progress-bar color
+  ** Customize the progress bar color
   */
-  loading: { color: '#fff' },
-
-  /*
-  ** Global CSS
-  */
-  css: [
-  ],
-
-  /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-  ],
-
-  /*
-  ** Nuxt.js modules
-  */
-  modules: [
-  ],
-
+  loading: { color: "#FFBB43" },
   /*
   ** Build configuration
   */
   build: {
     /*
-    ** You can extend webpack config here
+    ** Run ESLint on save
     */
-    extend(config, ctx) {
+    extend(config, { isDev }) {
+      if (isDev && process.client) {
+        config.module.rules.push({
+          enforce: "pre",
+          test: /\.(js|vue)$/,
+          loader: "eslint-loader",
+          exclude: /(node_modules)/
+        });
+      }
     }
   }
-}
+};
