@@ -10,11 +10,11 @@ module.exports = {
   },
   content: [
     [
-      'pages',
+      'blog',
       {
-        page: '/page/_page',
+        page: '/blog/posts/_post',
         permalink: '/:slug',
-        isPost: false
+        isPost: true
       }
     ],
     [
