@@ -10,20 +10,20 @@ module.exports = {
   },
   content: [
     [
-      'blog',
+      'pages',
       {
-        page: '/blog/posts/_post',
+        page: '/page/_page',
         permalink: '/:slug',
-        isPost: true
-      }
-    ],
-    [
-      'products',
-      {
-        page: '/products/_product',
-        permalink: '/product/:slug',
         isPost: false
       }
     ]
+    // [
+    //   'products',
+    //   {
+    //     page: '/products/_product',
+    //     permalink: '/product/:slug',
+    //     isPost: false
+    //   }
+    // ]
   ]
 }
